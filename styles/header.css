@@ -13,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 0 2em;
 }
 
 .conteiner {
@@ -56,4 +57,113 @@
 
 .conteiner_botão {
     display: none;
+}
+
+.conteiner_título, .opções  {
+    display: none;
+}
+.conteiner_texto {
+    display: none;
+}
+
+.conteiner_botão:checked~.conteiner_rótulo>.cabeçalho_menu-hamburguer {
+    background-image: url("../img/Frame 20.svg");
+}
+.conteiner_botão:checked~.conteiner_rótulo {
+    background: var(--azul_degrade); /*Não necessariamente precisa, pq a imagem frame 20 já tem o degrade...*/
+}
+
+@media screen and (min-width: 1024px) {
+
+    .conteiner_título, 
+    .conteiner_título_negrito {
+        font-family: var(--fonte_secundária);
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .conteiner_título {
+        font-weight: 400;
+        display: block;
+    }
+
+    .opções {
+        display: flex;
+    }
+
+    .opções_item {
+        padding: 2em 1em;
+        text-transform: uppercase;
+    }
+
+    .opções_link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    .conteiner_imagem_transparente {
+        display: none;
+    }
+    .cabeçalho_menu-hamburguer {
+        display: none;
+    }
+    .conteiner_imagem {
+        padding: 1em 1em 1em 80px;
+    }
+    .opções_botão:checked ~ .lista-menu{
+        display: block;
+        width: auto;    
+    }
+
+    .opções_botão {
+        display: none;
+    }
+    .conteiner_botão:checked~.lista-menu {
+        display: none;
+    }
+    .conteiner_texto {
+        display: none;
+    }
+    .cabeçalho {
+        padding: 0 2em;
+    }
+    .opções_botão:checked~.opções_rótulo>.opções_item {
+        background: var(--azul_degrade);
+        color: var(--branco);
+    }
+    .lista-menu_item:hover {
+        background: var(--azul_degrade);
+    }
+
+    .lista-menu_item:hover>.lista-menu_link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .conteiner_link {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
+    color: var(--preto);   
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    }
+    .conteiner_imagem {
+        padding: 1em 0.3em 1em 80px;
+    }
+    .conteiner_texto {
+        display: block;
+    }
+
+    .cabeçalho {
+        padding: 0 2em;
+    }
+
+    .opções {
+        margin-right: auto;
+        margin-left: 4em ;
+    }
 }
